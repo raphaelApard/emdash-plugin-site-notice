@@ -6,7 +6,7 @@ import { z } from "astro/zod";
 import { DEFAULT_TIME_ZONE, type Notice, assertTimeZone, isActive, parseInstant } from "./notice.js";
 
 const ID = "site-notice";
-const VERSION = "0.3.0";
+const VERSION = "0.1.0";
 const PACKAGE = "emdash-plugin-site-notice";
 const NOTICE_KEY = "notice";
 const ADMIN_ENTRY = `${PACKAGE}/admin`;
