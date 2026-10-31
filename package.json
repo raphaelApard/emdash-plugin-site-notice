@@ -1,6 +1,6 @@
 {
 	"name": "emdash-plugin-site-notice",
-	"version": "0.3.0",
+	"version": "0.1.0",
 	"description": "Scheduled, Markdown site-wide announcement banner for EmDash, editable from the admin and through MCP.",
 	"keywords": [
 		"emdash",
