@@ -1,0 +1,56 @@
+{
+	"name": "emdash-plugin-site-notice",
+	"version": "0.3.0",
+	"description": "Scheduled, Markdown site-wide announcement banner for EmDash, editable from the admin and through MCP.",
+	"keywords": [
+		"emdash",
+		"emdash-plugin",
+		"banner",
+		"announcement",
+		"mcp"
+	],
+	"license": "MIT",
+	"author": "Raphael Apard",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/raphaelApard/emdash-plugin-site-notice.git"
+	},
+	"bugs": "https://github.com/raphaelApard/emdash-plugin-site-notice/issues",
+	"homepage": "https://github.com/raphaelApard/emdash-plugin-site-notice#readme",
+	"type": "module",
+	"main": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs"
+		},
+		"./admin": "./src/admin/index.tsx"
+	},
+	"files": [
+		"dist",
+		"src/admin",
+		"src/notice.ts"
+	],
+	"scripts": {
+		"build": "tsdown src/index.ts --format esm --dts --clean",
+		"dev": "tsdown src/index.ts --format esm --dts --watch",
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "pnpm typecheck && pnpm build"
+	},
+	"peerDependencies": {
+		"@cloudflare/kumo": "^2.6.0",
+		"astro": ">=6.0.0",
+		"emdash": ">=1.4.0",
+		"react": "^18.0.0 || ^19.0.0"
+	},
+	"devDependencies": {
+		"@cloudflare/kumo": "2.6.0",
+		"@types/react": "19.3.0",
+		"astro": "^7.3.2",
+		"emdash": "^1.4.0",
+		"react": "19.2.4",
+		"tsdown": "0.20.3",
+		"typescript": "6.0.3"
+	}
+}
